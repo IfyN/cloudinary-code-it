@@ -38,6 +38,22 @@ class CloudinaryApp {
           transformedUrl = this.currentImageUrl;
           break;
 
+        case "text":
+          const textImage = new CloudinaryImage("sample", {
+            cloudName: "demo",
+          });
+          transformedUrl = textImage
+            .overlay(
+              source(
+                clText(
+                  "Pink Flower",
+                  new TextStyle("Arial", 100).fontWeight("bold")
+                ).textColor("white")
+              ).position(new Position().gravity(compass("north")).offsetY(20))
+            )
+            .toURL();
+          break;
+
         default:
           transformedUrl = this.currentImageUrl;
       }
