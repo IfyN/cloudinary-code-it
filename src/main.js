@@ -72,6 +72,40 @@ class CloudinaryApp {
             .toURL();
           break;
 
+        case "sepia":
+          const sepiaImage = new CloudinaryImage("sample", {
+            cloudName: "demo",
+          });
+          transformedUrl = sepiaImage.effect(Actions.Effect.sepia(80)).toURL();
+          break;
+
+        case "brightness":
+          const brightnessImage = new CloudinaryImage("sample", {
+            cloudName: "demo",
+          });
+          transformedUrl = brightnessImage
+            .adjust(Actions.Adjust.brightness(30))
+            .toURL();
+          break;
+
+        case "contrast":
+          const contrastImage = new CloudinaryImage("sample", {
+            cloudName: "demo",
+          });
+          transformedUrl = contrastImage
+            .adjust(Actions.Adjust.contrast(30))
+            .toURL();
+          break;
+
+        case "rounded":
+          const roundedImage = new CloudinaryImage("sample", {
+            cloudName: "demo",
+          });
+          transformedUrl = roundedImage
+            .roundCorners(Actions.RoundCorners.byRadius(50))
+            .toURL();
+          break;
+
         default:
           transformedUrl = this.currentImageUrl;
       }
