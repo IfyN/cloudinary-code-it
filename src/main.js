@@ -54,6 +54,15 @@ class CloudinaryApp {
             .toURL();
           break;
 
+        case "crop":
+          const cropImage = new CloudinaryImage("sample", {
+            cloudName: "demo",
+          });
+          transformedUrl = cropImage
+            .resize(Actions.Resize.fill().width(400).height(400))
+            .toURL();
+          break;
+
         default:
           transformedUrl = this.currentImageUrl;
       }
