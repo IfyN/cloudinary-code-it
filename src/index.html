@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudinary SDK Image Transformations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="image-container">
+            <img id="mainImage" src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="Main image" />
+        </div>
+
+        <div class="controls">
+            <h3>Apply Transformations:</h3>
+            <div class="btn-group">
+                <button class="btn" data-transformation="original">Original</button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern Cloudinary SDK using @cloudinary/url-gen -->
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
