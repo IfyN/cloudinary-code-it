@@ -63,6 +63,15 @@ class CloudinaryApp {
             .toURL();
           break;
 
+        case "grayscale":
+          const grayscaleImage = new CloudinaryImage("sample", {
+            cloudName: "demo",
+          });
+          transformedUrl = grayscaleImage
+            .effect(Actions.Effect.grayscale())
+            .toURL();
+          break;
+
         default:
           transformedUrl = this.currentImageUrl;
       }
